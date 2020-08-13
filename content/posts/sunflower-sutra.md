@@ -1,7 +1,7 @@
 ---
 date: 2020-08-13T16:00:09Z
 title: Playing with Other Content Management Systems
-author: Allen Ginsberg
+author: Darren Beattie
 hero_image: "/content/images/adrien-olichon--aOsCcTJXWY-unsplash.jpg"
 
 ---
