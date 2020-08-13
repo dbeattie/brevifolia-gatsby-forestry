@@ -5,36 +5,36 @@ author: Darren Beattie
 hero_image: "/content/images/adrien-olichon--aOsCcTJXWY-unsplash.jpg"
 
 ---
-I admit I'm a bit of a Ghost fanboy. I even applied to an engineering support position recently, though I'm sad to say I did not get through to the final round. 
+I admit I've become a bit of a [Ghost](https://ghost.org/ "Ghost") fanboy. I even applied to an engineering support position recently, though I'm sad to say I did not get through to the final round.
 
-However, that doesn't mean Ghost is without its flaws.
+However, that doesn't mean Ghost is without its flaws. $29 per install for managed 
 
 After discovering that running multiple instances of Ghost on a small $5 DigitalOcean Droplet creates an updating challenge (in my last post) I started looking for alternatives.
 
 ## The Search
 
-My search has taken me a lot of places and I am contemplating constructing a CMS breakdown post with my pros/cons list for everything I've tried. 
+My search has taken me a lot of places and I am contemplating constructing a CMS breakdown post with my pros/cons list for everything I've tried. This is the interim post.
 
-The most obvious con for me is the price, which eliminates an enormous number of CMS options from the fold. Many are outrageously priced for an individual and clearly catered to enterprise situations. 
+The most obvious con for me is the price, which eliminates an enormous number of CMS options from the fold. Many are outrageously priced for an individual and clearly catered to enterprise situations.
 
-Those with affordable (or free) tiers tend to be over-the-top, basically, a visual graphical interface for an entire back-end ([Strapi](https://strapi.io/ "Strapi")/Contentful/DatoCMS etc...). A lot more than I need. 
+Those with affordable (or free) tiers tend to be over-the-top, basically, a visual graphical interface for an entire back-end ([Contentful](https://www.contentful.com/ "Contentful")/[DatoCMS](https://www.datocms.com/ "DatoCMS") etc...). A lot more than I need.
 
 You can always go with the classics:
 
 * WordPress
 * Drupal
 
-But I'm trying to get away from slow monolithic do-it-all solutions of the past that have poor writing experiences. 
+But I'm trying to get away from slow monolithic do-it-all solutions of the past that have poor writing experiences.
 
-Unfortunately, you can no longer set up custom domains on Medium or I'd just leave it all there. 
+Unfortunately, you can no longer set up custom domains on Medium or I'd just leave it all there.
 
-It's also tempting just to set up a static JAMstack site hosted on Vercel, Netlify or GitHub Pages and link it out to Medium for writing. But then all the SEO for any of my personal musings would end up on Medium and not [darrenbeattie.com](https:/darrenbeattie.com "(darrenbeattie.com)"). The whole point of owning and using this domain is to drive awareness. 
+It's also tempting just to set up a static JAMstack site hosted on Vercel, Netlify or GitHub Pages and link it out to Medium for writing. But then all the SEO for any of my personal musings would end up on Medium and not [darrenbeattie.com](https:/darrenbeattie.com "(darrenbeattie.com)"). The whole point of owning and using this domain is to drive awareness.
 
 I'm generally looking for alternatives that will help me with some elements of web development as a by-product of their use.
 
-The open-source ones (like Ghost or Strapi) are great for this because I can go into the source code and play around. They can also both be used with Next.js or Gatsby.js in the JAMstack as static sites. My jam at the moment because they are both React-based.
+The open-source ones (like Ghost or [Strapi](https://strapi.io/ "Strapi")) are great for this because I can go into the source code and play around. They can also both be used with Next.js or Gatsby.js in the JAMstack as static sites. My jam at the moment because they are both React-based.
 
-The problem is both require a server-based set-up to expose a backend API to the front-end. I don't really want to spend $50-80 USD a year to host static content that receives very little traffic. 
+The problem is both require a server-based set-up to expose a backend API to the front-end. I don't really want to spend $50-80 USD a year to host static content that receives very little traffic.
 
 I really just want to write periodically and have a place to statically share information on me and the projects I've done or are working on. Something that can be hosted on Vercel, Netlify or GitHub Pages would be ideal.
 
@@ -49,7 +49,11 @@ Both tie directly into a [GitHub](https://github.com/ "GitHub") (or [GitLab](htt
 
 Meaning they really embrace the JAMstack approach, whereby nearly everything and anything you do can be done directly from your git-flow.
 
-You can edit markdown directly from the editor of your choice, push to a branch, merge to master and your changes are merged and automatically redeployed to your static host of choice.
+You can edit markdown directly from the editor of your choice, push to a branch, merge to master and your changes are merged and automatically redeployed to almost your [static host of choice](https://forestry.io/docs/hosting/ "static host of choice").
+
+NetlifyCMS is open source and actually not tied directly to Netlify. It's what I ended up trying first.
+
+I admit I didn't really go down the configuration and tooling rabbit hole though as Netlify does offer a generous free hosting tier that I'll probably never exceed with this site.
 
 I'm using Netlify here but you c
 
