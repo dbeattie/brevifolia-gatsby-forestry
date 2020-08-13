@@ -1,13 +1,68 @@
 ---
-date: 2019-08-08T22:42:09.000+00:00
-title: Sunflower Sutra
+date: 2020-08-13T16:00:09Z
+title: Playing with Other Content Management Systems
 author: Allen Ginsberg
 hero_image: "/content/images/adrien-olichon--aOsCcTJXWY-unsplash.jpg"
 
 ---
-I walked on the banks of the tincan banana dock and sat down under the huge shade of a Southern Pacific locomotive to look for the sunset over the box house hills and cry.
+I admit I'm a bit of a Ghost fanboy. I even applied to an engineering support position recently, though I'm sad to say I did not get through to the final round. 
 
-Jack Kerouac sat beside me on a busted rusty iron pole, companion, we thought the same thoughts of the soul, bleak and blue and sad-eyed, surrounded by the gnarled steel roots of trees of machinery.
+However, that doesn't mean Ghost is without its flaws.
+
+After discovering that running multiple instances of Ghost on a small $5 DigitalOcean Droplet creates an updating challenge (in my last post) I started looking for alternatives.
+
+## The Search
+
+My search has taken me a lot of places and I am contemplating constructing a CMS breakdown post with my pros/cons list for everything I've tried. 
+
+The most obvious con for me is the price, which eliminates an enormous number of CMS options from the fold. Many are outrageously priced for an individual and clearly catered to enterprise situations. 
+
+Those with affordable (or free) tiers tend to be over-the-top, basically, a visual graphical interface for an entire back-end ([Strapi](https://strapi.io/ "Strapi")/Contentful/DatoCMS etc...). A lot more than I need. 
+
+You can always go with the classics:
+
+* WordPress
+* Drupal
+
+But I'm trying to get away from slow monolithic do-it-all solutions of the past that have poor writing experiences. 
+
+Unfortunately, you can no longer set up custom domains on Medium or I'd just leave it all there. 
+
+It's also tempting just to set up a static JAMstack site hosted on Vercel, Netlify or GitHub Pages and link it out to Medium for writing. But then all the SEO for any of my personal musings would end up on Medium and not [darrenbeattie.com](https:/darrenbeattie.com "(darrenbeattie.com)"). The whole point of owning and using this domain is to drive awareness. 
+
+I'm generally looking for alternatives that will help me with some elements of web development as a by-product of their use.
+
+The open-source ones (like Ghost or Strapi) are great for this because I can go into the source code and play around. They can also both be used with Next.js or Gatsby.js in the JAMstack as static sites. My jam at the moment because they are both React-based.
+
+The problem is both require a server-based set-up to expose a backend API to the front-end. I don't really want to spend $50-80 USD a year to host static content that receives very little traffic. 
+
+I really just want to write periodically and have a place to statically share information on me and the projects I've done or are working on. Something that can be hosted on Vercel, Netlify or GitHub Pages would be ideal.
+
+## Enter Git-based CMS's
+
+I found two unique options:
+
+1. [NetlifyCMS](https://www.netlifycms.org/ "NetlifyCMS")
+2. [Forestry](https://forestry.io/ "Forestry")
+
+Both tie directly into a [GitHub](https://github.com/ "GitHub") (or [GitLab](https://about.gitlab.com/ "GitLab")/[Bitbucket](https://bitbucket.org/product "Bitbucket")) repo for your JAMstack project (I'm using Gatsby here) and pull data directly from your folder structure.
+
+Meaning they really embrace the JAMstack approach, whereby nearly everything and anything you do can be done directly from your git-flow.
+
+You can edit markdown directly from the editor of your choice, push to a branch, merge to master and your changes are merged and automatically redeployed to your static host of choice.
+
+I'm using Netlify here but you c
+
+## [**Setting up LFS in your git repo**](https://forestry.io/blog/versioning-large-files-with-git-lfs/#setting-up-lfs-in-your-git-repo)
+
+Git LFS is easy to set up and works transparently on your repository. Once you configure Git LFS in your repo, you can continue to commit and push large files as you would normally.
+
+1. Download and install the Git LFS extension [**from the Git LFS website**](https://git-lfs.github.com/).
+2. Navigate to your repository and run `git lfs install`.
+3. Run `git lfs track` followed by the file pattern you want. To track all PNG files for example, run `git lfs track "*.png"`
+4. Commit the `.gitattributes` file as well as any existing files that are now tracked in LFS, and push the changes to your remote
+
+That’s it! You’re now using Git LFS to handle your large binary files.
 
 ![](/content/images/elcarito-CRn-_80z4SE-unsplash.jpg)
 
