@@ -7,7 +7,7 @@ hero_image: "/content/images/adrien-olichon--aOsCcTJXWY-unsplash.jpg"
 ---
 I admit I've become a bit of a [Ghost](https://ghost.org/ "Ghost") fanboy. I even applied to an engineering support position recently, though I'm sad to say I did not get through to the final round.
 
-However, that doesn't mean Ghost is without its flaws. $29 per install for managed 
+However, that doesn't mean Ghost is without its flaws. $29 per install for managed
 
 After discovering that running multiple instances of Ghost on a small $5 DigitalOcean Droplet creates an updating challenge (in my last post) I started looking for alternatives.
 
@@ -51,51 +51,24 @@ Meaning they really embrace the JAMstack approach, whereby nearly everything and
 
 You can edit markdown directly from the editor of your choice, push to a branch, merge to master and your changes are merged and automatically redeployed to almost your [static host of choice](https://forestry.io/docs/hosting/ "static host of choice").
 
-NetlifyCMS is open source and actually not tied directly to Netlify. It's what I ended up trying first.
+NetlifyCMS also provides a yourwebsite.com/admin access point for you to edit your content without using markdown. 
 
-I admit I didn't really go down the configuration and tooling rabbit hole though as Netlify does offer a generous free hosting tier that I'll probably never exceed with this site.
+Now I don't mind working with markdown and find myself being more and more comfortable with it the longer I'm a developer. It's an integral part of web software development.
 
-I'm using Netlify here but you c
+However, it is not a nice writing experience. Mostly because you typically can't see how it will look while you write it.  
 
-## [**Setting up LFS in your git repo**](https://forestry.io/blog/versioning-large-files-with-git-lfs/#setting-up-lfs-in-your-git-repo)
+NetlifyCMS is open source and actually not tied directly to Netlify. You can deploy other places but my plan all along was to deploy to Netlify, so that's what I ended up trying first.
 
-Git LFS is easy to set up and works transparently on your repository. Once you configure Git LFS in your repo, you can continue to commit and push large files as you would normally.
+I admit I didn't really go down the configuration and tooling rabbit hole you may need to host elsewhere. Netlify offers a generous free hosting tier that I'll probably never exceed with this site. I've used them before and I didn't see any point in going down the path of messing around with other more complicated setups.
 
-1. Download and install the Git LFS extension [**from the Git LFS website**](https://git-lfs.github.com/).
-2. Navigate to your repository and run `git lfs install`.
-3. Run `git lfs track` followed by the file pattern you want. To track all PNG files for example, run `git lfs track "*.png"`
-4. Commit the `.gitattributes` file as well as any existing files that are now tracked in LFS, and push the changes to your remote
+Forestry, on the other hand, is a web-based portal. It's free for up to 3 sites, with 3 contributors per site. In other words, perfect for a personal blog. Admittedly, they aren't really hosting much, just providing an interface for you to interact with your own Git Repo. 
 
-That’s it! You’re now using Git LFS to handle your large binary files.
+It is not (near as I can tell) open-source but the developers behind the tool do contribute to open-source. And they are a Canadian company, which I always like to support when I can. Based out of PEI (_of all places..._), which is not exactly a "Tech Hub."
 
-![](/content/images/elcarito-CRn-_80z4SE-unsplash.jpg)
+They have built an open-source tool called [TinaCMS](https://tinacms.org/). It's on my list of things to try soon, but it's not production-ready.
 
-The only water on the river mirrored the red sky, sun sank on top of final Frisco peaks, no fish in that stream, no hermit in those mounts, just ourselves rheumy-eyed and hung-over like old bums on the riverbank, tired and wily.
+I ultimately decided on Forestry. It's a better writing experience, a better design and most importantly it was WAY easier to set up than NetlifyCMS. It took me almost an entire day to debug and launch a Gatsby starter with it, but only a couple of hours to do the same with Forestry.
 
-Look at the Sunflower, he said, there was a dead gray shadow against the sky, big as a man, sitting dry on top of a pile of ancient sawdust–
+The documentation is also extensive and very well written. Not that the NetlifyCMS documentation is bad, it's quite good for open-source, it just didn't make it as easy. You have to mess around with gatsby config files a lot to get it going.
 
-\--I rushed up enchanted–it was my first sunflower, memories of Blake–my visions–Harlem
-
-# “the gray Sunflower poised against the sunset, crackly bleak and dusty with the smut and smog and smoke of olden locomotives in its eye”
-
-and Hells of the Eastern rivers, bridges clanking Joes greasy Sandwiches, dead baby carriages, black treadless tires forgotten and unretreaded, the poem of the riverbank, condoms & pots, steel knives, nothing stainless, only the dank muck and the razor-sharp artifacts passing into the past–
-
-and the gray Sunflower poised against the sunset, crackly bleak and dusty with the smut and smog and smoke of olden locomotives in its eye–
-
-corolla of bleary spikes pushed down and broken like a battered crown, seeds fallen out of its face, soon-to-be-toothless mouth of sunny air, sunrays obliterated on its hairy head like a dried wire spiderweb,
-
-leaves stuck out like arms out of the stem, gestures from the sawdust root, broke pieces of plaster fallen out of the black twigs, a dead fly in its ear,
-
-Unholy battered old thing you were, my sunflower O my soul, I loved you then!
-
-![](/content/images/francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg)
-
-The grime was no man’s grime but death and human locomotives,
-
-all that dress of dust, that veil of darkened railroad skin, that smog of cheek, that eyelid of black mis’ry, that sooty hand or phallus or protuberance of artificial worse-than-dirt–industrial–modern–all that civilization spotting your crazy golden crown–
-
-and those blear thoughts of death and dusty loveless eyes and ends and withered roots below, in the home-pile of sand and sawdust, rubber dollar bills, skin of machinery, the guts and innards of the weeping coughing car, the empty lonely tincans with their rusty tongues alack, what more could I name, the smoked ashes of some cock cigar, the cunts of wheelbarrows and the milky breasts of cars, wornout asses out of chairs & sphincters of dynamos–all these
-
-entangled in your mummied roots–and you standing before me in the sunset, all your glory in your form!
-
-A perfect beauty of a sunflower! a perfect excellent lovely sunflower existence! a sweet natural eye to the new hip moon, woke up alive and excited grasping in the sunset shadow sunrise golden monthly breeze!
+The problem with open source tools is that you're completely on your own and most of the people working on them are volunteers. The development process tends to be slower overall. The best ones have a solid revenue stream (usually a cloud/hosting option) to fully support their development.
